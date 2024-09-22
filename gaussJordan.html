@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gauss-Jordan Calculator</title>
+    <link rel="stylesheet" href="gaussJordan.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="head-title">Kalkulator Matriks Gauss - Jordan</h1>
+      <div class="matrix-size-input">
+        <label class="head-title" for="rows">Rows:</label>
+        <input type="number" id="rows" min="2" value="2" />
+        <label class="head-title" for="cols">Columns:</label>
+        <input type="number" id="cols" min="3" value="3" />
+        <button onclick="generateMatrix()">Buat Matriks</button>
+      </div>
+      <div id="matrix-input-container"></div>
+
+      <div class="solve-container">
+        <button onclick="solve()">Lihat Hasil</button>
+      </div>
+      <div class="head-title" id="solution-container">
+        <h2>Solution</h2>
+        <table id="solution-table"></table>
+      </div>
+      <div
+        class="head-title"
+        id="solution-set-container"
+        style="display: none"
+      ></div>
+      <div class="head-title" id="history-container">
+        <h2>History Penyelesaian</h2>
+        <table id="history-table"></table>
+      </div>
+    </div>
+    <script src="gaussJordan.js"></script>
+  </body>
+</html>
